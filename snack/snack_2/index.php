@@ -27,7 +27,22 @@ Con un form passare come parametri GET name, mail e age e verificare (cercando i
 </head>
 
 <body>
-    <div class="container">
+    <div class="container mt-5">
+        <form action="result.php" novalidate>
+            <div class="mb-3">
+                <label for="nome" class="form-label">Nome</label>
+                <input type="text" class="form-control" id="nome" name="nome"></input>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" name="email"></input>
+            </div>
+            <div class="mb-3">
+                <label for="eta" class="form-label">Età</label>
+                <input type="number" class="form-control" id="eta" name="eta" step="1"></input>
+            </div>
+            <button class="btn btn-primary">Invia</button>
+        </form>
     </div>
 </body>
 

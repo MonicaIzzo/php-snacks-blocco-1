@@ -1,53 +1,13 @@
 <?php
 
-?>
+$nome = $_GET['nome'] ?? '';
+$email = $_GET['email'] ?? '';
+$eta = $_GET['eta'] ?? '';
 
+$is_nome_valid = mb_strlen(trim($nome)) > 3;
+$is_email_valid = str_contains($email, '.') && str_contains($email, '@');
+$is_eta_valid = is_numeric($eta) && $eta > 0;
 
-<!DOCTYPE html>
-<html lang="en">
+$is_from_valid = !$is_nome_valid || !$is_email_valid || !$is_eta_valid;
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Free Web tutorials">
-    <meta name="keywords" content="HTML, CSS">
-    <meta name="author" content="Monica Izzo">
-    <title>php Badwords | Pagina di ritorno</title>
-
-    <!-- icon-->
-    <link rel="icon" type="image/png" sizes="32x32" href="img/faicon.png">
-    <!-- stylesheet -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    <link href="css/style.css" rel="stylesheet">
-</head>
-
-<body>
-    <div class="container">
-    </div>
-</body>
-
-</html>
-
-<?php
-
-
-/* 
-------
-*/
-
-
-/* 
-------
-*/
-
-
-/* 
-------
-*/
-
-
-/* 
-------
-*/
-?>
+echo $is_from_valid ? 'Accesso negato' : 'Accesso riuscito';
