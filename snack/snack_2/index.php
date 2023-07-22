@@ -1,6 +1,10 @@
+<?php
+
+?>
+
 <!--
-# Bonus
-Prendere un paragrafo abbastanza lungo, contenente diverse frasi. Prendere il paragrafo e suddividerlo in tanti paragrafi <p>. Ogni punto un nuovo paragrafo.
+# Snack 2
+Con un form passare come parametri GET name, mail e age e verificare (cercando i metodi che non conosciamo nella documentazione) che name sia più lungo di 3 caratteri, che mail contenga un punto e una chiocciola e che age sia un numero. Se tutto è ok stampare “Accesso riuscito”, altrimenti “Accesso negato”
 -->
 
 <!DOCTYPE html>
@@ -13,7 +17,7 @@ Prendere un paragrafo abbastanza lungo, contenente diverse frasi. Prendere il pa
     <meta name="description" content="Free Web tutorials">
     <meta name="keywords" content="HTML, CSS">
     <meta name="author" content="Monica Izzo">
-    <title>PHP Snacks | 03</title>
+    <title>PHP Snacks | 02</title>
 
     <!-- icon-->
     <link rel="icon" type="image/png" sizes="32x32" href="img/faicon.png">
